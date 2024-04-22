@@ -1,0 +1,347 @@
+:root {
+    --main-color: rgb(0, 61, 56);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .7s;
+}
+body {
+    font-family:  'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+/* styles.css */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#loading-screen img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.aside {
+    width: 10%;
+    position: absolute;
+    z-index: 9;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 50px 0;
+}
+.aside2 {
+    right: 0;
+    z-index: 9;
+}
+.aside::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.178), transparent);
+    width: 1px;
+    height: 100%;
+}
+
+.aside2::before {
+    left: 0;
+} 
+.logo img {
+    width: 40px;
+    margin-bottom: 100px;
+}
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.features h2 {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+}
+.features ion-icon {
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 4px 0;
+}
+.accessory {
+    width: 53%;
+}
+.accessory img {
+    width: 100%;
+    border-radius: 30%;
+}
+
+.colors h2 {
+    margin: 25px 0 100px 0;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.colors .chair-img {
+    display: block;
+    width: 58px;
+    border-radius: 20%;
+    background-image: linear-gradient(to right, black, rgba(255, 255, 255, 0.096));
+    margin-bottom: 20px;
+}
+.colors .chair-img img {
+    width: 100%;
+}
+.codeidea {
+    width: 90px;
+    padding: 7px 7px 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.384);;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.codeidea img{
+    width: 18px;
+    
+}
+.codeidea ion-icon{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.header {
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.178);
+}
+.header {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .title {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 40px;
+    padding: 0 0 11px 0;
+    position: relative;
+}
+.header .menu {
+    margin: auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .menu2::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 1px;
+    height: 1000px;
+    background-image: linear-gradient(to top, transparent, transparent, rgba(255, 255, 255, 0.178));
+}
+.header .menu1::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 1px;
+    height: 1000px;
+    background-image: linear-gradient(to top, transparent, transparent, rgba(255, 255, 255, 0.178));
+}
+.header .menu li {
+    margin: 20px;
+    display: inline;
+    float: left;
+    list-style: none;
+}
+.header .menu li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+.landing-page {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.landing-page .gaming-chair {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.landing-page .gaming-chair .main {
+    width: 100%;
+    height: 85%;
+    transition: .7s;
+}
+.landing-page .gaming-chair .main.animation {
+    transform: translateY(540px);
+    width: 100%;
+    height: 90%;
+}
+@media (max-width: 800px) {
+    .header .menu {
+        font-size: 13px;
+    }
+    .header .title {
+        font-size: 25px;
+    }
+    .aside .logo img{
+        width: 30px;
+    }
+    .features h2{
+        font-size: 13px;
+    }
+    .features ion-icon {
+        font-size: 15px;
+    }
+    .landing-page .gaming-chair {
+        height: 500px;
+    }
+}
+@media (max-width: 600px) {
+    .aside .logo img{
+        width: 25px;
+    }
+    .header .title {
+        font-size: 20px;
+    }
+    .header .menu li {
+        margin: 10px;
+    }
+    .header .menu1::before {
+        right: 0px;
+    }
+    .header .menu2::before {
+        left: 0px;
+    }
+    .landing-page .gaming-chair {
+        height: 400px;
+    } 
+    .features ion-icon {
+        font-size: 13px;
+    }
+    .features h2{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .header .menu {
+        display: none;
+    }
+    .header .title {
+        margin: 0 auto;
+    }
+    .aside {
+        width: 80px;
+    }
+}
+
+
+.about {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 100px 0;
+}
+
+.about .informations-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    margin-left: 150px;
+    padding-top: 100px;
+}
+.about .informations-container .details {
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.623);
+    padding: 5px 8px;
+    background-image: linear-gradient(to right, rgba(69, 212, 255, 0.253), rgba(0, 0, 0, 0));
+    position: relative;
+    transition: .7s;
+    opacity: 0;
+}
+.about .informations-container .details.margin-bottom {
+    margin-bottom: 60px;
+    opacity: 1;
+}
+.about .informations-container .details::after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    bottom: -26px;
+    width: 80px;
+    height: 20px;
+    border: 1px solid rgba(132, 230, 255, 0.527);
+    border-top: none;
+    border-right: none;
+}
+@media (max-width: 1000px) {
+    .about .informations-container {
+        margin-left: 50px;
+    }
+}
+@media (max-width: 800px) {
+    .about .informations-container {
+        margin-left: 10px;
+        width: 140px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px) {
+    .about .informations-container {
+        margin-left: 0px;
+        font-size: 12px;
+        padding-top: 50px;
+        justify-content: start;
+    }
+    .about .informations-container .details::after {
+        width: 70px;
+        right: -20px;
+    }
+    .landing-page .gaming-chair .main {
+        height: 70%;
+    }
+    .landing-page .gaming-chair .main.animation {
+        height: 70%;
+        transform: translateY(400px);
+        margin-left: 100px;
+    }
+    .about .informations-container .details.margin-bottom {
+        margin-bottom: 30px;
+        opacity: 1;
+    }
+    .codeidea {
+        width: 77px;
+    }
+}
